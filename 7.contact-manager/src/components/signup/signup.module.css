@@ -1,0 +1,16 @@
+.signupContainer{
+    width: 40%;
+    margin: auto;
+}
+.submitBtn{
+    width: 100%;
+    padding: 8px;
+    background-color: #218F76;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.submitBtn:hover{
+    background-color: #095846;
+}

@@ -1,0 +1,46 @@
+.contact{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #addace;
+    border: 2px solid #208167;
+}
+.contactInfo{
+    width: 100%;
+}
+.contactInfo h3, p, p{
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+.controlBtns{
+    margin-top: 10px;
+}
+.editBtn{
+    padding: 10px 15px;
+    background-color: #1287A5;
+    border: none;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.deleteBtn{
+    padding: 10px 20px;
+    background-color: #D63031;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.contactType{
+    width: 20%;
+    align-self: flex-start;
+}
+.personalContact{
+    padding: 5px 20px;
+    background-color: #1b22a1;
+    text-transform: capitalize;
+    color: white;
+    border-radius: 5px;
+}

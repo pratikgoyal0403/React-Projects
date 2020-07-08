@@ -1,0 +1,31 @@
+.mainContainer{
+    width: 70%;
+    margin: auto;
+    min-height: 90vh;
+    padding: 20px 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.addContact{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    flex-direction: column;
+}
+.addContact h1{
+    text-transform: capitalize;
+    color: #10A881;
+}
+.contactContainer{
+    width: 100%;
+    padding: 10px ;
+}
+.textCenter{
+    width: fit-content;
+    margin: auto;
+    margin-top: 30px;
+}

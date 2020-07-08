@@ -1,0 +1,25 @@
+.spinnerContainer{
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 50px;
+}
+
+.spinner{
+    border: 3px solid transparent;
+    border-bottom: 3px solid red;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    animation: spin 650ms linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}

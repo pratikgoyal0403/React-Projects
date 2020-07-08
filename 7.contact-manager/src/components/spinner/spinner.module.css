@@ -1,0 +1,19 @@
+.spinnerContainer{
+    width: 30px;
+    height: 30px;
+    margin: 20px auto;
+}
+.spinner{
+    width: 90%;
+    height: 90%;
+    border: 2px dotted #218F76;
+    border-radius: 50%;
+    animation: spin 500ms ease-in forwards infinite;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
