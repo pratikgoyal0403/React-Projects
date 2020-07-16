@@ -1,0 +1,18 @@
+.mainContainer{
+    width: 100vw;
+    min-height: 93vh;
+    background-color: #e4eaee;
+    padding: 20px;
+}
+.createPost{
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    box-shadow: .5px .5px 10px grey;
+    padding: 20px;
+    border-radius: 8px;
+}
+.feedContainer{
+    width: 50%;
+    margin: auto;
+}

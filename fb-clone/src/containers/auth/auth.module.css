@@ -1,0 +1,44 @@
+.authContainer{
+    width: 40%;
+    margin: auto;
+    background-color: white;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.authContainer h1{
+    color: #0A79DF;
+}
+form{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+}
+form input{
+    width: 100%;
+    margin: 10px;
+    border: none;
+    font-size: 16px;
+
+    border-bottom: 1px solid black;
+}
+form input:focus{
+    outline: none;
+}
+form button{
+    background-color: #0A79DF;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}

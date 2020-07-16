@@ -1,0 +1,26 @@
+.createPostForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.createPostForm input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid grey;
+    margin: 10px auto;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+.createPostForm input:focus{
+    outline: none;
+}
+.createPostForm button{
+    width: 100%;
+    background-color: #3498DB;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
