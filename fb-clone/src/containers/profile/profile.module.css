@@ -1,0 +1,42 @@
+.profilePage{
+    padding-bottom: 20px;
+}
+.userFeed{
+    width: 50%;
+    margin: auto;
+}
+.profileInfo{
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.profileImageContainer{
+    width: 250px;
+    height: 200px;
+}
+
+.personalInfo{
+    width: 100%;
+    min-height: 15rem;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-transform: capitalize;
+    margin-left: 20px;
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color: #0A79DF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #075aa8;
+}

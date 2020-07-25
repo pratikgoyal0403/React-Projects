@@ -21,7 +21,7 @@
     list-style: none;
     padding: 10px 15px;
     border-radius: 2px;
-    
+    margin-left: 10px;
 }
 
 .listItem:hover{

@@ -4,8 +4,8 @@ import classes from './comment.module.css';
 const comment = (props)=>{
     return (
         <div className={classes.commentContainer}>
-            <p className={classes.userName}>pratik goyal</p>
-            <p>awesome bro </p>
+            <p className={classes.userName}>{props.username}</p>
+            <p>{props.comment} </p>
         </div>
     );
 }

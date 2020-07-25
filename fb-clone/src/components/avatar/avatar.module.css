@@ -1,0 +1,15 @@
+.avatarContainer{
+    width: 100%;
+    padding: 0px;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+ .avatarContainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+} 

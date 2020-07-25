@@ -1,0 +1,17 @@
+.alertContainer{
+    max-width: 200px;
+    color: red;
+    max-height: 50px;
+    border: 2px solid red;
+    background-color: rgb(255, 207, 207);
+    animation: open 250ms linear forwards;
+}
+@keyframes open{
+    0%{
+        max-height: 0px;
+        opacity: .5;
+    }100%{
+        max-height: 50px;
+        opacity: 1;
+    }
+}

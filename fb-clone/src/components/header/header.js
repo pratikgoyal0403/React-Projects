@@ -1,22 +1,50 @@
-import React from 'react';
-import classes from './header.module.css';
+import React from "react";
+import { withRouter, Link } from "react-router-dom";
+import classes from "./header.module.css";
 
-
-const Header = ()=>{
-    return(
-        <header className={classes.headerContainer}>
-            <nav>
-               <img src="logo.png" alt="facebook logo"/>
-            </nav>
-            <ul className={classes.navigation}>
-                <li className={[classes.listItem, classes.activeLink].join(' ')}><a href="/"><i className="fa fa-home"></i></a></li>
-            </ul>
-           <ul className={classes.navigation}>
-               <li className={classes.listItem}><a href="/login">Login</a></li>
-               <li className={classes.listItem}><a href="/signup">Signup</a></li>
-           </ul>
-        </header>
+const Header = (props) => {
+    const listClasses = [classes.listItem, classes.activeLink];
+  let links = (
+    <ul className={classes.navigation}>
+      <li className={classes.listItem}>
+        <Link to="/login">Login</Link>
+      </li>
+      <li className={classes.listItem}>
+        <Link to="/signup">Signup</Link>
+      </li>
+    </ul>
+  );
+  if (props.userInfo !== '') {
+    links = (
+      <ul className={classes.navigation}>
+        <li className={classes.listItem}>
+          <Link to="/profile">
+            <i className="fa fa-user">{props.userInfo.username}</i>
+          </Link>
+        </li>
+      </ul>
     );
-}
+  }
+  return (
+    <header className={classes.headerContainer}>
+      <nav>
+        <img src="logo.png" alt="facebook logo" />
+      </nav>
+      <ul className={classes.navigation}>
+        <li className={props.location.pathname === '/' ? listClasses.join(' '): listClasses[0]}>
+          <Link to="/">
+            <i className="fa fa-home"></i>
+          </Link>
+        </li>
+        <li className={props.location.pathname === '/profile' ? listClasses.join(' '): listClasses[0]}>
+        <Link to={`/profile?Id=${props.userInfo._id}`}>
+            <i className="fa fa-user"></i>
+          </Link>
+        </li>
+      </ul>
+      {links}
+    </header>
+  );
+};
 
-export default Header;
+export default withRouter(Header);
