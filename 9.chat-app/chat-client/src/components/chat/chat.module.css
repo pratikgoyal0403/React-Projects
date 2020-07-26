@@ -1,0 +1,23 @@
+.container{
+    width: 50vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: blue;
+}
+.chatContainer{
+    height: 40vh;
+    width: 90%;
+    background-color: white;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.messageContainer{
+    width: 100%;
+}
+.messageContainer input{
+    width: 100%;
+    padding: 5px;
+}

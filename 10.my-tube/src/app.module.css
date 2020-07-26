@@ -1,0 +1,16 @@
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 10px;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.videoList {
+  width: 40%;
+}

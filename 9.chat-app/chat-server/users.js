@@ -18,7 +18,7 @@ const removeUser = (id)=>{
         return users.splice(index, 1);
     }
 }
-
+        
 const getUser = (id)=> users.find(u => u.id === id);
 
 const getUsersInRoom = (room)=> users.filter(u => u.room === room);

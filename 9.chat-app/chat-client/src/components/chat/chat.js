@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import queryString from "query-string";
 import io from "socket.io-client";
+import Message from "../message/message";
+import ScrollToBottom from 'react-scroll-to-bottom';
+import classes from "./chat.module.css";
 
 let socket;
 
@@ -19,44 +22,46 @@ const Chat = (props) => {
     setRoom(room);
 
     socket = io(URI);
-    socket.emit("join", { name, room }, ()=>{});
+    socket.emit("join", { name, room }, () => {});
 
     return () => {
-      console.log("[component is now unmounting]");
       socket.emit("disconnect");
       socket.off();
     };
   }, [props.location.search, URI]);
 
   useEffect(() => {
-    socket.on(
-      "message",
-      (msg) => {
-        console.log(msg);
-        setMessages([...messages, msg]);
-      },  
-    );
+    socket.on("message", (msg) => {
+      setMessages([...messages, msg]);
+    });
   }, [messages]);
 
-  const sendMessage = (e)=>{
+  const sendMessage = (e) => {
     e.preventDefault();
-    if(message){
-      console.log(message);
-      socket.emit('sendMessage', message, ()=>{
-        setMessage('');
-      })
+    if (message) {
+      socket.emit("sendMessage", message, () => {
+        setMessage("");
+      });
     }
-  }
-  console.log(message, messages);
+  };
   return (
-    <div className="">
-      <input
-        type="text"
-        placeholder="your text message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        onKeyPress={e => e.key === 'Enter'? sendMessage(e): null}
-      />
+    <div className={classes.container}>
+      <div className={classes.chatContainer}>
+        <ScrollToBottom>
+        {messages.map((message) => (
+          <Message text={message.text} user={message.user} name={name} />
+        ))}
+        </ScrollToBottom>
+      </div>
+      <div className={classes.messageContainer}>
+        <input
+          type="text"
+          placeholder="your text message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          onKeyPress={(e) => (e.key === "Enter" ? sendMessage(e) : null)}
+        />
+      </div>
     </div>
   );
 };
