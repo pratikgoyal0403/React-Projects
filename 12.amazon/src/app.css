@@ -1,0 +1,24 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-family: sans-serif;
+}
+.wrapper{
+    width: 100vw;
+    background-color: #eee;
+}
+.shopContainer{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    margin-top: 8vh;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 0px 20px;
+}

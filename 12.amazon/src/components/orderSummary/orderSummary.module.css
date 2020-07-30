@@ -1,0 +1,18 @@
+.orderSummaryContainer {
+  background-color: rgb(226, 226, 226);
+  padding: 20px 30px;
+  border-radius: 5px;
+}
+.orderSummaryContainer p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.orderSummaryContainer p span {
+  font-weight: 550;
+}
+.orderSummaryContainer button {
+  width: 100%;
+  background-color: #fbad46;
+  border: 1px solid black;
+  padding: 2px;
+}

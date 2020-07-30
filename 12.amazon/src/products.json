@@ -1,0 +1,44 @@
+[
+  {
+    "name": "dell xps",
+    "price": 170000,
+    "rating": 5,
+    "imageUrl": "./assests/dell-xps.jpg",
+    "description": "13.3 inch laptop (10th Gen Intel core i7/1TB SSD/16GB/Windows 10/Intel HD Graphics"
+  },
+  {
+    "name": "Macbook Air",
+    "price": 130000,
+    "rating": 3,
+    "imageUrl": "./assests/macbook-air.jpg",
+    "description": "(13-inch, 2.0GHz Dual-core 10th Generation Intel core i5 Processor, 8GB RAM, 256GB STORAGE), Gold"
+  },
+  {
+    "name": "Macbook Pro",
+    "price": 210000,
+    "rating": 4,
+    "imageUrl": "./assests/macbook-pro.jpg",
+    "description": "(13-inch, 2.0GHz Dual-core 10th Generation Intel core i7 Processor, 16GB RAM, 1TB STORAGE), SPACE GREY"
+  },
+  {
+    "name": "Amazon echo",
+    "price": 3499,
+    "rating": 4,
+    "imageUrl": "./assests/amazon-echo.jpg",
+    "description": "new improved smart speaker with Alexa (Black)"
+  },
+  {
+    "name": "Samsung galaxy buds+ (Black)",
+    "price": 10399,
+    "rating": 4,
+    "imageUrl": "./assests/buds.jpg",
+    "description": ""
+  },
+  {
+    "name": "Apple air buds Pro",
+    "price": 23499,
+    "rating": 4,
+    "imageUrl": "./assests/airbuds.jpg",
+    "description": ""
+  }
+]
