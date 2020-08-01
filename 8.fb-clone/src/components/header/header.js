@@ -16,11 +16,9 @@ const Header = (props) => {
   );
   if (props.userInfo !== '') {
     links = (
-      <ul className={classes.navigation}>
+      <ul className={[classes.navigation, classes.signout].join(' ')}>
         <li className={classes.listItem}>
-          <Link to="/profile">
-            <i className="fa fa-user">{props.userInfo.username}</i>
-          </Link>
+            <i className="fa fa-sign-out" onClick={props.signout}>{props.userInfo.username}</i>
         </li>
       </ul>
     );

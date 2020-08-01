@@ -4,7 +4,8 @@ const initialState = {
    username: '',
    userInfo: '',
     userId: '',
-    isAuth: false
+    isAuth: false,
+    error: null
 }
 
 const userReducer = (state = initialState, action)=>{
@@ -22,7 +23,8 @@ const userReducer = (state = initialState, action)=>{
                 ...state,
                 userId: action.user._id,
                 userInfo: action.user,
-                isAuth: true
+                isAuth: true,
+                error: null
             }
         case actionTypes.SIGNUP:
             return state;
@@ -30,6 +32,11 @@ const userReducer = (state = initialState, action)=>{
             return{
                 ...state,
                 userInfo: action.updatedUser,
+            }
+        case actionTypes.SHOW_ERROR:
+            return{
+                ...state,
+                error: action.message
             }
         default:
             return state;

@@ -41,7 +41,12 @@ export const fetchUser = (formData, history) => {
       method: "POST",
       body: formData,
     })
-      .then((result) => result.json())
+      .then((result) => {
+        if (result.status !== 200) {
+          return result.json().then((res) => dispatch(showError(res.message)));
+        }
+        return result.json();
+      })
       .then((user) => {
         dispatch(login(user.user));
         localStorage.setItem("id", user.token);
@@ -93,3 +98,12 @@ export const postUserUpdate = (formData) => {
       .catch((err) => console.log(err));
   };
 };
+
+
+//ERROR ACTIONS
+export const showError = (message)=>{
+  return{
+    type: actionTypes.SHOW_ERROR,
+    message,
+  }
+}

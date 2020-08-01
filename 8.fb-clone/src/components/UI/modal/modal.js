@@ -36,7 +36,7 @@ const Modal = (props) => {
   }
   return (
     <div className={classes.modalContainer}>
-      {content}
+      {content ? content: props.children}
     </div>
   );
 };

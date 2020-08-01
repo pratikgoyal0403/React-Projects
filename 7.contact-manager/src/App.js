@@ -31,6 +31,7 @@ class App extends Component {
     })
       .then((result) => result.json())
       .then((res) => {
+        console.log(res);
         localStorage.setItem('cm-token', res.token);
         localStorage.setItem('cm-userId', res.user._id);
         this.setState({ isLoggedIn: true, userName: res.user.username, token: res.token });

@@ -5,7 +5,6 @@ import Avatar from "../avatar/avatar";
 import classes from "./post.module.css";
 
 const Post = (props) => {
-    console.log()
   const likeHandler = (event) => {
     if (event.target.classList.contains("fa-thumbs-o-up")) {
       event.target.style.color = "#0A79DF";
@@ -19,7 +18,7 @@ const Post = (props) => {
     <div className={classes.post}>
       <div className={classes.postHeader}>
         <div className={classes.avatarContainer}>
-          <Link to={`/profile?id=props.userInfo.userId}`}>
+          <Link to={`/profile?id=${props.userInfo.userId}`}>
             <Avatar imageUrl={props.userInfo.imageUrl} />
           </Link>
         </div>
@@ -28,7 +27,7 @@ const Post = (props) => {
             <h5>{props.userInfo.username}</h5>
           </Link>
           {props.currentUser._id === props.userInfo.userId ? (
-            <i className="fa fa-trash"></i>
+            <i className="fa fa-trash" onClick={props.onDelete}></i>
           ) : null}
         </div>
       </div>

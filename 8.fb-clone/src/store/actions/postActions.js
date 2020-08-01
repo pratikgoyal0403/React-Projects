@@ -38,51 +38,73 @@ export const fetchedPost = (posts) => {
 export const fetchPost = (token) => {
   return (dispatch) => {
     fetch("http://localhost:5050/posts", {
-        headers: {
-            Authorization: 'bearer '+token
-        }
+      headers: {
+        Authorization: "bearer " + token,
+      },
     })
       .then((result) => {
-          if(result.status === 500){
-                window.location.reload(); 
-          }else{
-              return result.json();
-          }
+        if (result.status === 500) {
+          window.location.reload();
+        } else {
+          return result.json();
+        }
       })
       .then((posts) => {
-              dispatch(fetchedPost(posts.posts));
+        dispatch(fetchedPost(posts.posts));
       })
       .catch((err) => console.log(err));
   };
 };
 
-export const addComment = (updatedPost)=>{
-    return {
-        type: actionType.ADD_COMMENT,
-        updatedPost
-    }
-}
+export const addComment = (updatedPost) => {
+  return {
+    type: actionType.ADD_COMMENT,
+    updatedPost,
+  };
+};
 
-export const postComment = (formData)=>{
-    return dispatch => {
-        fetch('http://localhost:5050/comment', {
-            method: 'POST',
-            body: formData
-        }).then(result=> result.json()).then(res=>{
-            dispatch(addComment(res.post));
-        }).catch(err => console.log(err));
-    }
-}
+export const postComment = (formData) => {
+  return (dispatch) => {
+    fetch("http://localhost:5050/comment", {
+      method: "POST",
+      body: formData,
+    })
+      .then((result) => result.json())
+      .then((res) => {
+        dispatch(addComment(res.post));
+      })
+      .catch((err) => console.log(err));
+  };
+};
 
-const userPosts = (posts) =>{
-  return{
-    type: actionType.USER_POSTS,
-    posts
+// export const userPosts = (userId) =>{
+//   return{
+//     type: actionType.USER_POSTS,
+//     userId
+//   }
+// }
+
+// export const getOnlyUserPosts = (userId)=>{
+//   return dispatch => {
+
+//   }
+// }
+
+export const deletePost = (post)=>{
+  return {
+    type: actionType.POST_DELETE,
+    post,
   }
 }
 
-export const getOnlyUserPosts = (userId)=>{
-  return dispatch => {
-
-  }
-}
+export const requestdeletePost = (postId) => {
+  return (dispatch) => {
+    fetch("http://localhost:5050/post/" + postId, {
+      method: "DELETE",
+    })
+      .then((result) => result.json())
+      .then(res => {
+        dispatch(deletePost(res.post))
+      }).catch(err => console.log(err));
+  };
+};

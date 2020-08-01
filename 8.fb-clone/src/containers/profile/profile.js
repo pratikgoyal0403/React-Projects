@@ -18,12 +18,14 @@ class Profile extends React.Component {
   componentDidMount() {
     const urlId = this.props.location.search.split("=")[1].toString();
     if (urlId === this.props.currentUserInfo._id.toString()) {
+     
       this.setState({ userInfo: this.props.currentUserInfo, editable: true });
     } else {
       // this.props.getUserProfile(urlId);
       fetch("http://localhost:5050/user/" + urlId)
         .then((result) => result.json())
         .then((user) => {
+         
           this.setState({ userInfo: user.user, editable: false });
         })
         .catch((err) => console.log(err));
@@ -42,7 +44,7 @@ class Profile extends React.Component {
   submitProfileEdit = (username, image) => {
     const formData = new FormData();
     formData.append("username", username);
-    formData.append("userId", this.props.userInfo._id);
+    formData.append("userId", this.state.userInfo._id);
     formData.append("image", image);
     this.props.onProfileUpdate(formData);
     this.setState({
@@ -51,13 +53,14 @@ class Profile extends React.Component {
   };
 
   render() {
+
     let backdrop = null;
     if (this.state.showModal) {
       backdrop = (
         <>
           <Backdrop clicked={this.dismissModal} />
           <Modal
-            userInfo={this.props.userInfo}
+            userInfo={this.state.userInfo}
             clicked={this.submitProfileEdit}
           />
         </>
@@ -91,7 +94,7 @@ class Profile extends React.Component {
           </div>
         </div>
         <div className={classes.userFeed}>
-            <Feed fetchAll={false} userId={this.state.userInfo._id} />
+            <Feed fetchAll={false} userId={this.state.userInfo._id}/>
         </div>
         </>  
       );
@@ -113,6 +116,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onProfileUpdate: (formData) => dispatch(actions.postUserUpdate(formData)),
+    // onUserPosts: (userId)=> dispatch(actions.userPosts(userId))
   };
 };
 

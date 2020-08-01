@@ -31,6 +31,9 @@ class Feed extends React.Component {
       })
     }
   }
+
+
+
   render() {
     let posts = this.props.posts;
     if (!this.props.fetchAll && this.state.personalPosts) {
@@ -53,6 +56,7 @@ class Feed extends React.Component {
                 userInfo={post.userInfo}
                 currentUser={this.props.userInfo}
                 comments={post.comments}
+                onDelete={()=> this.props.onPostDelete(post._id)}
               />
             ));
     }
@@ -70,6 +74,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onFetchingPosts: (token) => dispatch(action.fetchPost(token)),
+    onPostDelete: (postId) => dispatch(action.requestdeletePost(postId))
   };
 };
 

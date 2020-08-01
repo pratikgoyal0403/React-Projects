@@ -27,6 +27,7 @@
 }
 .avatarContainer{
     width: 60%;
+    height: 200px;
 }
 .modalContent input{
     width: 70%;

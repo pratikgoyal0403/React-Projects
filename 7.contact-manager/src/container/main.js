@@ -31,14 +31,13 @@ class Main extends Component {
   }
   addContact = async (e, inputs) => {
     e.preventDefault();
-    const id = this.state?.editContact?._id;
     let method = "POST";
+    const id = this.state?.editContact?._id;
     let url = "http://localhost:5000/contact/"+this.props.userId;
     if (this.state.isEditing) {
-      console.log("editing mode");
       method = "PUT";
       url = "http://localhost:5000/contact/"+this.props.userId+'?contactId=' + id;
-      console.log(id);
+
     }
     await fetch(url, {
       method: method,
@@ -66,9 +65,7 @@ class Main extends Component {
       .catch((err) => console.log(err));
   };
   editContactHandler = (e, id) => {
-    console.log("editing");
     const contact = this.state.contacts.find((el) => el._id === id);
-    console.log(contact);
     this.setState({ isEditing: true, editContact: contact });
   };
   filterContactsHandler = (e) => {

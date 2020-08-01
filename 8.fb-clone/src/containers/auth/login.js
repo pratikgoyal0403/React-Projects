@@ -20,10 +20,23 @@ class Login extends Component{
     }
     formSubmitHandler = (event)=>{
         event.preventDefault();
+        this.props.alterLoading()
         const formData = new FormData();
         formData.append('email', this.state.email);
         formData.append('password', this.state.password);
         this.props.onLogin(formData, this.props.history);
+    }
+    resetPassword = ()=>{
+        if(this.state.email === ''){
+            return console.log('email cannot be empty');
+        }
+        const formData = new FormData();
+        formData.append('email', this.state.email);
+        fetch('http://localhost:5050/reset', {
+            method: 'POST',
+            body: formData
+        });
+        console.log(this.props.history)
     }
     render(){
         return(
@@ -32,8 +45,9 @@ class Login extends Component{
                 <form onSubmit={this.formSubmitHandler}>
                     <input type="text" name="email" placeholder="email..." onChange={this.emailHandler}/>
                     <input type="password" name="password" placeholder="password..." onChange={this.passwordHandler}/>
-                    <button type="submit">Login</button>
+                    <button type="submit">{this.props.loading ? 'Loging...' : 'login'}</button>
                 </form>
+                <p className={classes.forgotPasswordLink}>forgot password? <button onClick={this.resetPassword}>reset password</button></p>
             </div>
         );
     }

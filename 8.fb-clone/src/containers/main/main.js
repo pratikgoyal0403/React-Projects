@@ -8,6 +8,9 @@ import classes from './main.module.css';
 
 class Main extends Component{
 
+    componentWillMount(){
+        this.props.stopLoading()
+    }
     render(){
         const token = localStorage.getItem('id');
         return(
