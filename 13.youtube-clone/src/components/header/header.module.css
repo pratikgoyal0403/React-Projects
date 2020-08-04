@@ -1,0 +1,26 @@
+.headerWrapper{
+    width: 100vw;
+    height: 8vh;
+    background-color: white;
+    font-size: 1.6rem;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerWrapper nav:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: .5rem 1rem;
+}
+.headerWrapper nav:first-child svg{
+    font-size: 2.8rem;
+    margin-right: 3rem;
+    cursor: pointer;
+    color: rgb(100, 100, 100);
+}
+.headerWrapper nav:first-child img{
+    width: 100px;
+    height: 30px;
+}
