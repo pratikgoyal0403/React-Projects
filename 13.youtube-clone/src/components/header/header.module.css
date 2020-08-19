@@ -24,3 +24,23 @@
     width: 100px;
     height: 30px;
 }
+.searchBar{
+    width: 40%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.searchBar input{
+    background-color: transparent;
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+}
+.searchBar button{
+    width: 10%;
+    padding: 10px;
+    border: none;
+    border-left: 1px solid grey;
+}

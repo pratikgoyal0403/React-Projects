@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './header.module.css';
 import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
 
 const Header = ()=>{
     return(
@@ -9,8 +10,9 @@ const Header = ()=>{
                 <MenuIcon />
                 <img src="./assests/youtube-logo.png" alt="youtube" />
             </nav>
-            <nav>
-
+            <nav className={classes.searchBar}>
+                <input type="text" />
+                <button><SearchIcon /></button>
             </nav>
             <nav></nav>
         </header>
