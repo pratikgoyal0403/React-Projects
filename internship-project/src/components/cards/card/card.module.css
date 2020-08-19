@@ -1,0 +1,52 @@
+.card{
+    min-width: 20vw;
+    height: 100%;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.514);
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card:last-child{
+    margin-right: 0px;
+}
+.image{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+.card h4{
+    width: fit-content;
+    margin: 10px auto;
+    font-size: 24px;
+    text-transform: capitalize;
+    text-align: center;
+}
+.cardContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 550;
+    margin-top: 20px;
+}
+.flashCard{
+    width: 100%;
+    height: 100%;
+}
+.flashCard h1{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(221, 229, 238);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    text-transform: capitalize;
+}

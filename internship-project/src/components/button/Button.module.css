@@ -1,0 +1,7 @@
+.blueBtn{
+    background-color: rgb(2, 4, 117);
+    color: white;
+    padding: 7px 15px;
+    text-transform: capitalize;
+    border: none;
+}

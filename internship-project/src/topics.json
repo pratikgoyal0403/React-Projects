@@ -1,0 +1,50 @@
+[
+    {
+        "title": "geography",
+        "questions": 10,
+        "time": "2 hr 30 min",
+        "imageUrl": "./assets/thumbnail.jpg"
+    },
+    {
+        "title": "economics",
+        "questions": 10,
+        "time": "2 hr",
+        "imageUrl": "./assets/thumbnail.jpg"
+    },
+    {
+        "title": "history",
+        "questions": 10,
+        "time": "2 hr",
+        "imageUrl": "./assets/thumbnail.jpg"
+    },
+    {
+        "title": "politics",
+        "questions": 10,
+        "time": "2 hr 30 min",
+        "imageUrl": "./assets/thumbnail.jpg"
+    },
+    {
+        "title": "physics",
+        "questions": 10,
+        "time": "3 hr",
+        "imageUrl": "./assets/thumbnail.jpg"
+    },
+    {
+        "title": "chemistry",
+        "questions": 10,
+        "time": "1 hr 45 min",
+        "imageUrl": "./assets/thumbnail.jpg"
+    },
+    {
+        "title": "biology",
+        "questions": 10,
+        "time": "2 hr 45 min",
+        "imageUrl": "./assets/thumbnail.jpg"
+    },
+    {
+        "title": "maths",
+        "questions": 10,
+        "time": "5 hr 45 min",
+        "imageUrl": "./assets/thumbnail.jpg"
+    }
+]

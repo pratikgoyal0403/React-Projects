@@ -1,0 +1,16 @@
+
+.container:nth-child(2){
+    margin: 40px auto;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+}
+.cardsContainer{
+    padding: 0px 10px;
+    background-color: rgb(221, 229, 238);
+    border-radius: 10px;
+}

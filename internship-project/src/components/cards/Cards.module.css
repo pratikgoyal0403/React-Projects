@@ -1,0 +1,15 @@
+.row{
+    min-width: 95%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
+    padding: 10px;
+    /* background-color: rgb(221, 229, 238); */
+    border-radius: 15px;
+    overflow-x: scroll;
+}
+.row::-webkit-scrollbar{
+    display: none;
+}
